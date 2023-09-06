@@ -1,0 +1,387 @@
+@font-face {
+  font-family: MontHeavy;
+  src: url("../resources/fonts/Mont-Heavy.otf");
+}
+@font-face {
+  font-family: MontBold;
+  src: url("../resources/fonts/Mont-Bold.otf");
+}
+@font-face {
+  font-family: MontSemiBold;
+  src: url("../resources/fonts/Mont-SemiBold.otf");
+}
+@font-face {
+  font-family: MontRegular;
+  src: url("../resources/fonts/Mont-Regular.otf");
+}
+@font-face {
+  font-family: MontBook;
+  src: url("../resources/fonts/Mont-Book.otf");
+}
+@font-face {
+  font-family: MontLight;
+  src: url("../resources/fonts/Mont-Light.otf");
+}
+.inv {
+  display: none !important;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 10px;
+}
+@media only screen and (max-width: 54em) {
+  html {
+    font-size: 9px;
+  }
+}
+@media only screen and (max-width: 48em) {
+  html {
+    font-size: 8px;
+  }
+}
+@media only screen and (max-width: 30em) {
+  html {
+    font-size: 9px;
+  }
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+body {
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  height: 100%;
+  width: 100vw;
+  background-color: #0075FF;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loaderContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.loaderContainer .loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #0075FF;
+  border-radius: 50%;
+  width: 220px;
+  height: 220px;
+  animation: spin 2s linear infinite;
+  top: 50%;
+}
+.loaderContainer img {
+  position: absolute;
+}
+
+.termModal {
+  background-color: #fff;
+  border-radius: 1rem;
+  position: absolute;
+  z-index: 10;
+  width: 90%;
+  height: 90%;
+  padding: 0.5rem 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+.termModal button {
+  margin: 1rem 0;
+  background-color: rgba(0, 117, 255, 0.9);
+  color: #fff;
+  font-family: "MontBold", sans-serif;
+  border: none;
+  padding: 0.4rem 1rem;
+  font-size: 1.4rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.termModal p {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  text-align: justify;
+}
+.termModal p b {
+  text-align: justify;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 140rem;
+}
+.container .structure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 30em) {
+  .container .structure {
+    flex-direction: column;
+  }
+}
+
+.info {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+@media only screen and (max-width: 54em) {
+  .info {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 30em) {
+  .info {
+    width: 90%;
+  }
+}
+.info .logoContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+.info .logoContainer img {
+  width: 23rem;
+  object-fit: contain;
+}
+@media only screen and (max-width: 75em) {
+  .info .logoContainer img {
+    width: 20rem;
+  }
+}
+@media only screen and (max-width: 54em) {
+  .info .logoContainer img {
+    width: 15rem;
+  }
+}
+@media only screen and (max-width: 30em) {
+  .info .logoContainer img {
+    width: 40%;
+  }
+}
+.info .logoContainer span {
+  font-size: 3rem;
+  color: #fff;
+  font-family: "MontSemiBold", sans-serif;
+}
+@media only screen and (max-width: 54em) {
+  .info .logoContainer span {
+    font-size: 2.4rem;
+  }
+}
+.info .text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.info .text p {
+  font-size: 2.6rem;
+  font-family: "MontSemiBold", sans-serif;
+  color: #fff;
+  text-align: center;
+}
+@media only screen and (max-width: 54em) {
+  .info .text p {
+    font-size: 2.2rem;
+  }
+}
+.info .text p span {
+  font-family: "MontBold", sans-serif;
+}
+
+.forms {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 3px solid #fff;
+  padding: 3rem;
+}
+@media only screen and (max-width: 54em) {
+  .forms {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 30em) {
+  .forms {
+    width: 90%;
+    border-left: none;
+  }
+}
+.forms .freeInternetContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.forms .freeInternetContainer .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.forms .freeInternetContainer .header h3 {
+  text-align: center;
+  font-size: 2rem;
+  font-family: "MontHeavy", sans-serif;
+  color: #fff;
+}
+.forms .freeInternetContainer .formFreeInternet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.forms .freeInternetContainer .formFreeInternet label {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.forms .freeInternetContainer .formFreeInternet label input {
+  width: 80%;
+  border: none;
+  color: #0075FF;
+  -webkit-text-fill-color: #0075FF;
+  padding: 1.4rem 1rem;
+  border-radius: 0.5rem;
+  outline: none;
+  font-family: "MontSemiBold", sans-serif;
+  font-size: 1.3rem;
+}
+@media only screen and (max-width: 75em) {
+  .forms .freeInternetContainer .formFreeInternet label input {
+    width: 100%;
+  }
+}
+.forms .freeInternetContainer .formFreeInternet label input::placeholder {
+  color: #0075FF;
+}
+.forms .freeInternetContainer .formFreeInternet #chkTerminos {
+  width: 80%;
+  font-size: 1rem;
+  text-align: justify;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "MontLight", sans-serif;
+  color: #fff;
+  user-select: none;
+  cursor: pointer;
+}
+@media only screen and (max-width: 75em) {
+  .forms .freeInternetContainer .formFreeInternet #chkTerminos {
+    width: 100%;
+  }
+}
+.forms .freeInternetContainer .formFreeInternet #chkTerminos #cbox1 {
+  align-self: flex-start;
+  width: auto;
+}
+.forms .freeInternetContainer .formFreeInternet #chkTerminos span {
+  font-weight: 900;
+  font-family: "MontSemiBold", sans-serif;
+}
+.forms .freeInternetContainer .formFreeInternet .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+.forms .freeInternetContainer .formFreeInternet .buttons a,
+.forms .freeInternetContainer .formFreeInternet .buttons button {
+  color: #0075FF;
+  border: none;
+  width: 80%;
+  height: 3rem;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  font-family: "MontBold", sans-serif;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 75em) {
+  .forms .freeInternetContainer .formFreeInternet .buttons a,
+  .forms .freeInternetContainer .formFreeInternet .buttons button {
+    width: 100%;
+  }
+}
+.forms .freeInternetContainer .formFreeInternet .buttons a {
+  background-color: #0075FF;
+}
+.forms .freeInternetContainer .formFreeInternet .buttons button {
+  background-color: #33EAD1;
+}
+.forms .freeInternetContainer .formFreeInternet .buttons #back {
+  background-color: red;
+}
+
+/*# sourceMappingURL=style.css.map */
